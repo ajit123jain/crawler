@@ -2,6 +2,25 @@ require 'rubygems'
 require 'mechanize'
 require 'anemone'
 
+class Poplify
+  url = gets.chomp
+
+  def getAllUrls
+    URLs,i = Array.new,1
+    Anemone.crawl("https://www.bbc.co.uk/") do |anemone|
+      anemone.on_every_page do |page|
+        if urls.length < 100
+          urls.push(page.url)
+          puts "#{i}  #{page.url}"
+          i = i+1
+          break
+        end
+      end
+    end
+  end
+end
+
+
 def getAllUrls 
   urls = [] 
   i = 1
