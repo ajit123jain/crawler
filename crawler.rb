@@ -4,6 +4,7 @@ require 'anemone'
 
 def getAllUrls(rootUrl,max_urls)
   urls,i = Array.new,1
+  puts "********** List of all the urls *************"
   Anemone.crawl(rootUrl) do |anemone|
     anemone.on_every_page do |page|
       if urls.length < max_urls && !urls.include?(page.url)
@@ -86,13 +87,15 @@ urls.each do |url|
     end
   end
 end
+puts "***********  List of all the urls with their static assets ***************"
 j = 1
 $staticAssets.each do |key,value|  # printing all the URLs with their static assets 
-  puts "#{j}  #{key} #{value.length}"
+  puts "URL Index: #{j}  URL Value: #{key} Static Assets count: #{value.length}"
   j = j+1
   value.each_with_index do |val,i|
     puts "   #{i}  #{val}"
   end
+  puts ""
 end
  
 
