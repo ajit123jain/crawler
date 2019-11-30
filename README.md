@@ -11,7 +11,7 @@ Crawler for Finding Asset and all the urls
     ********** List of all the urls *************
     1  https://poplify.com/
     2  https://poplify.com/contact/
-    ***********  List of all the urls with their static assets ***************
+    ***********  List of all the urls with their static assets count ***************
     URL Index: 1  URL Value: https://poplify.com/ Static Assets count: 2
       0  http://newpoplify.poplify.com/wp-content/uploads/2016/12/poplilogo.png
       1  https://poplify.com/wp-content/uploads/2018/11/cropped-poplilogo-32x32.png

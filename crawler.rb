@@ -87,7 +87,7 @@ urls.each do |url|
     end
   end
 end
-puts "***********  List of all the urls with their static assets ***************"
+puts "***********  List of all the urls with their static assets count ***************"
 j = 1
 $staticAssets.each do |key,value|  # printing all the URLs with their static assets 
   puts "URL Index: #{j}  URL Value: #{key} Static Assets count: #{value.length}"
@@ -97,29 +97,3 @@ $staticAssets.each do |key,value|  # printing all the URLs with their static ass
   end
   puts ""
 end
- 
-
-
-
-
-
-
-
-
-
-
-# begin crawlLink(rootUrl)
-# rescue  Mechanize::ResponseCodeError  => ex
-# 	puts "Status code error"+ ex.response_code
-#   # $log.info("Status code error->"+ex.response_code)
-# rescue => e
-#   puts "here is failed request (#{e.inspect}), skipping it..."
-# end
-
-# $staticAssets.each do |key,value|
-#   puts "#{key}"
-#   value.each_with_index do |val,i|
-#     puts "   #{i}  #{val}"
-#   end
-# end
-# puts getAllUrls.length 
