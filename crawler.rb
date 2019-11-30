@@ -67,9 +67,11 @@ end
 # Main logic start from here  
 $staticAssets = Hash.new  # For Storing statisAssets 
 $pagesCrawled = Array.new # which has been already crawled 
+puts "Please Give Root URL or Domain Name" #Format with https 
 rootUrl = gets.chomp # Root URL or Domain Name 
 $agent = Mechanize.new 
 # poplify = Poplify.new
+puts "Please give me maxium no of urls you want to crawl"
 max_urls = gets.chomp.to_i
 urls = getAllUrls(rootUrl,max_urls)
 
