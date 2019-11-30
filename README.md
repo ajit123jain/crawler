@@ -1,5 +1,9 @@
 # crawler
 Crawler for Finding Asset and all the urls
+Requirements for this to run  
+ruby installed 
+Anemone Gem
+Mechanize Gem
 
 ## Instructions (for run this programme on terminal)
   ### Input format 
