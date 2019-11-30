@@ -3,7 +3,7 @@ require 'mechanize'
 require 'anemone'
 
 class Modular 
-  def getAllUrls(rootUrl,max_urls)
+  def getAllUrls(rootUrl,max_urls)   # It will give all the urls for single domain 
     urls,i = Array.new,1
     puts "********** List of all the urls *************"
     Anemone.crawl(rootUrl) do |anemone|
@@ -19,11 +19,11 @@ class Modular
     end
   end
 
-  def hasBeenCrawled?(link)
+  def hasBeenCrawled?(link)  # to check link already been crawled or not 
     return $pagesCrawled.include?(link.to_s)
   end
 
-  def crawlLink(parentLink)
+  def crawlLink(parentLink)  # crawl the link and find static assets 
     html = getPage($agent, parentLink);
     links = getHrefAndSrcLinks(html)
     creatingHashKey(parentLink)
@@ -44,7 +44,7 @@ class Modular
     return link.to_s =~ /(jpg|jpeg|gif|png|css|js|ico|xml|rss|txt|svg|css)$/
   end
   
-  def addToHash(parentLink, link)
+  def addToHash(parentLink, link) #add the static asset to corresponding hash
     $staticAssets[parentLink.to_s].push(link.to_s) 
   end
   
@@ -60,7 +60,7 @@ class Modular
     $staticAssets[parentLink.to_s] = Array.new
   end
 
-  def getPage(agent, url)
+  def getPage(agent, url)  #get whole page content to find all static assets 
     page = agent.get(url)		
     return Nokogiri::HTML(page.body)
   end
