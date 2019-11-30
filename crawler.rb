@@ -69,6 +69,7 @@ end
 # Main logic start from here  
 $staticAssets = Hash.new  # For Storing statisAssets 
 $pagesCrawled = Array.new # which has been already crawled 
+$file = open('myfile.out', 'w')
 puts "Please Give Root URL or Domain Name" #Format with https 
 rootUrl = gets.chomp # Root URL or Domain Name 
 $agent = Mechanize.new 
@@ -98,3 +99,4 @@ $staticAssets.each do |key,value|  # printing all the URLs with their static ass
   end
   puts ""
 end
+$file.puts $staticAssets

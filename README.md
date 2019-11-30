@@ -9,7 +9,7 @@ Crawler for Finding Asset and all the urls
   ### Input format 
   #### ruby crawler.rb
   #### https://poplify.com/
-  #### 10  
+  #### 2  
 
   ### Output format 
     ********** List of all the urls *************
