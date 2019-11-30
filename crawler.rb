@@ -3,7 +3,7 @@ require 'mechanize'
 require 'anemone'
 
 class Modular 
-  def getAllUrls(rootUrl,max_urls)   # It will give all the urls for single domain 
+  def getAllUrls(rootUrl,max_urls)   # It will give all the uniq urls for single domain 
     urls,i = Array.new,1
     puts "********** List of all the urls *************"
     Anemone.crawl(rootUrl) do |anemone|
