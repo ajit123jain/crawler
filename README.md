@@ -1,24 +1,26 @@
-# README
+# crawler
+Crawler for Finding Asset and all the urls
+## Requirements for this to run  
+#### ruby installed 
+#### Anemone Gem
+#### Mechanize Gem
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Instructions (for run this programme on terminal)
+  ### Input format 
+  #### ruby crawler.rb
+  #### https://poplify.com/
+  #### 2  
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  ### Output format 
+    ********** List of all the urls *************
+    1  https://poplify.com/
+    2  https://poplify.com/contact/
+    ***********  List of all the urls with their static assets count ***************
+    URL Index: 1  URL Value: https://poplify.com/ Static Assets count: 2
+      0  http://newpoplify.poplify.com/wp-content/uploads/2016/12/poplilogo.png
+      1  https://poplify.com/wp-content/uploads/2018/11/cropped-poplilogo-32x32.png
+      
+    URL Index: 2  URL Value: https://poplify.com/contact/ Static Assets count: 2
+      0  http://newpoplify.poplify.com/wp-content/uploads/2016/12/poplilogo.png
+      1  https://poplify.com/wp-content/uploads/2018/11/cropped-poplilogo-32x32.png
+      2  https://poplify.com/wp-content/uploads/2018/11/cropped-poplilogo-192x192.png
