@@ -1,22 +1,26 @@
 <div class='text-center mt-2'>
   <h3 style="text-center">Crawl the Domain Name and find all urls and their and static assets.</h3>
 </div>
-
-  <%= form_tag crawl_path,id:"domain-form",remote: true, method: "post" do %>
-    <div class="row p-5">
+<div class="p-5">
+  <%= form_tag crawl_path,id:"domain-form",class:'block p-2',remote: true, method: "post" do %>
+    <div class="row">
       <div class="form-group col-4">
         <%= label_tag :domain_name %>
-        <%= text_field_tag "domain_name",nil,class: "form-control",placeholder:'https://poplify.com/' %>
+        <%= text_field_tag "domain_name",@domain_name,class: "form-control",placeholder:'https://poplify.com/' %>
       </div>  
       <div class="form-group col-4">
         <%= label_tag :max_urls %>
-        <%= number_field_tag "max_urls",nil,class: "form-control",:input_html =>{:onkeypress =>"return event.charCode >= 48 && event.charCode <= 57",  :oninput=>"javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);",:maxLength=>"4", :min=> "0",:max=> "10000"} %>
+        <%= number_field_tag "max_urls",@max_urls,class: "form-control",:input_html =>{:onkeypress =>"return event.charCode >= 48 && event.charCode <= 57",  :oninput=>"javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);",:maxLength=>"4", :min=> "0",:max=> "10000"} %>
       </div>
-      <div class="col-4">
-      <%= submit_tag "Submit", class: "btn btn-primary",onClick:"form_validate()",style:'margin-top:30px;' %>
+      <div class="col-1"></div>
+      <div class="col-3">
+      <%= submit_tag "Submit", class: "btn btn-primary",style:'margin-top:30px;' %>
       </div>
     </div>  
   <% end %>  
+  <div class="url-list block table-responsive"></div>
+</div>
+
 <script>
   // function form_validate() {
   //   $('#domain-form').validate({
@@ -43,6 +47,6 @@
   // };
   // form_validate()
   $(document).ready(function(){
-  $('#domain_form').validate();
+  // $('#domain_form').validate();
 })
 </script>
