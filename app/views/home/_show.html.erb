@@ -1,0 +1,29 @@
+<div class="modal-dialog modal-lg">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Asset List</h5>
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+    </div>
+      <div class="modal-body">
+        <table class="table w-100">
+          <thead>
+            <tr>
+              <th>SR No.</th>
+              <th>Assets</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%@assets.each_with_index do |asset,i| %>
+              <tr>
+                <td><%= i+1 %></td>
+                <td><%= asset %></td>
+              </tr>
+            <% end %>  
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button data-dismiss="modal" class="btn btn-danger">Close</button>
+      </div> 
+  </div>
+</div>

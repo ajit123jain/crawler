@@ -11,7 +11,7 @@
       <tr>
         <td><%= i+1 %></td>
         <td><%= key %></td>
-        <td><%#= link_to root_path, class:'btn btn-info btn-sm' %></td>
+        <td><%= link_to "Show Assets",show_path(key:key), remote:true,class:'btn btn-primary'%></td>
       </tr>
     <% end %>  
   </tbody>
