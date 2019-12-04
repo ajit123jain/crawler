@@ -11,6 +11,19 @@ $black: black;
 body {
         font-family: 'Merriweather', sans-serif;
         background-color: #f2f3f8;
+        .loader.loader-div {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                background-color: #fff;
+                z-index: 10;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 400px;
+              }
 }
 h1,
 h2 {

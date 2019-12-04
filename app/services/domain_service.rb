@@ -22,7 +22,6 @@ class DomainService
   end
   def self.getAllUrls(rootUrl,max_urls)   # It will give all the uniq urls for single domain 
     urls,i = Array.new,1
-    puts "********** List of all the urls *************"
     Anemone.crawl(rootUrl) do |anemone|
       anemone.on_every_page do |page|
         if urls.length < max_urls && !urls.include?(page.url)
