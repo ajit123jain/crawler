@@ -25,6 +25,6 @@ Crawler for Finding Asset and all the urls
       1  https://poplify.com/wp-content/uploads/2018/11/cropped-poplilogo-32x32.png
       2  https://poplify.com/wp-content/uploads/2018/11/cropped-poplilogo-192x192.png
 
-    ![Screenshot](1.png)
-    ![Screenshot](2.png)
-    ![Screenshot](3.png)
+    ![Screenshot](https://github.com/ajit123jain/crawler/blob/master/1.png)
+    ![Screenshot](blob/master/1.png)
+    ![Screenshot](https://github.com/ajit123jain/crawler/blob/master/3.png)
