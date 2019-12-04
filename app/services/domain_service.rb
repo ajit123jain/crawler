@@ -26,7 +26,6 @@ class DomainService
       anemone.on_every_page do |page|
         if urls.length < max_urls && !urls.include?(page.url)
           urls.push(page.url)
-          puts "#{i}  #{page.url}"
           i = i+1
         else
           return urls

@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
   require 'home_helper'
   $output_hash = nil
-  def index
-     
+  
+  def index   
   end
 
   def crawl

@@ -19,42 +19,14 @@
     </div>  
   <% end %>  
   <div class="url-list block table-responsive"></div>
+  <div class="loader loader-div d-none">
+    <%= image_tag 'loader-ring.gif', style: 'height: 100px;'%>
+    <h2 class="ml-3 mb-0 mt-0">Loading ...</h2>
+  </div>
 </div>
-
 <script>
-  // function form_validate() {
-  //   $('#domain-form').validate({
-  //     rules: {
-  //       "domain_name": {
-  //         required: true,
-  //       },
-  //       "max_urls": {
-  //         required: true,
-  //       }
-  //     },
-  //     messages: {
-  //       "domain_name": {
-  //         required: "Please enter correct Domain Name."
-  //       },
-  //       "max_urls": {
-  //         required: "Please specify the No of urls."
-  //       },
-  //     },
-  //     errorPlacement: function (error, element) {
-  //       error.insertAfter(element);
-  //     }
-  //   });
-  // };
-  // form_validate()
-  $(document).ready(function(){
-  // $('#domain_form').validate();
-})
-function loader(){
+  function loader(){
     $('.loader').removeClass('d-none')
   }
 </script>
 <div id="asset-modal" class="modal fade m-auto" role="dialog" data-backdrop="static" style:'width:95%'></div>
-<div class="loader loader-div d-none">
-  <%= image_tag 'loader-ring.gif', style: 'height: 100px;'%>
-  <h2 class="ml-3 mb-0 mt-0">Loading ...</h2>
-</div>
